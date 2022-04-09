@@ -84,10 +84,11 @@ function handleCardClick(event) {
       if (event.target !== lastGuess) {
         turns += 1;
         if (event.target.className === lastGuess.className) {
-            
+            timeout = 1;
             event.target.classList.add('matched')
             lastGuess.classList.add('matched')
             matches += 1;
+            setTimeout(function() { timeout = 0 }, 1000);
             if (matches == COLORS.length/2) {
               if (JSON.parse(localStorage.getItem('best'))) {
                 if (turns < JSON.parse(localStorage.getItem('best'))['best']) {
