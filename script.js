@@ -103,8 +103,8 @@ function handleCardClick(event) {
           } else {
             timeout = 1;
             setTimeout(function() {
-              lastGuess.style.backgroundColor = 'white';
-              event.target.style.backgroundColor = 'white';
+              lastGuess.style.backgroundColor = document.querySelector('body').style.backgroundColor;
+              event.target.style.backgroundColor = document.querySelector('body').style.backgroundColor;
               timeout = 0;
             }, 1000)
         }
