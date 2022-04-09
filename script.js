@@ -93,10 +93,18 @@ function handleCardClick(event) {
                 if (turns < JSON.parse(localStorage.getItem('best'))['best']) {
                   localStorage.setItem('best', JSON.stringify({'best': turns}));
                   best.innerText = turns;
+                  if (turns === 5) {
+                    setTimeout(function() {alert("You didn't cheat did you?");}, 10);
+                  } else {
+                    setTimeout(function() {alert('BOOM! New High Score!');}, 10);
+                  }
+                } else {
+                  setTimeout(function() {alert('Great job!')}, 10);
                 }
               } else {
                 localStorage.setItem('best', JSON.stringify({'best': turns}));
                 best.innerText = turns;
+                setTimeout(function() {alert('Congratulations on winning your first game!') }, 10);
               }
             }
 
