@@ -4,6 +4,7 @@
   height: 200px;
   margin: 10px;
   display: inline-block;
+  border-radius: 10px;
 }
 
 body {
