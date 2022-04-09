@@ -6,6 +6,10 @@
   display: inline-block;
 }
 
+body {
+  background: linear-gradient(to right, rgb(231, 113, 229), rgb(51, 111, 169));
+}
+
 .board {
   border: 1px solid black;
   border-radius: 10px;
